@@ -1,5 +1,6 @@
 /* to start with good bases */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 *,
 *::after,
 *::before,
@@ -222,10 +223,112 @@ span {
 @media only screen and (max-width: 47em) {
   .b-content {
     padding-left: 0;
-    left: 8%;
   }
 }
 
+@media only screen and (max-width: 60.85em) {
+  .h-header,
+  h1 {
+    font-size: 30px;
+    line-height: 0;
+  }
+}
+
+@media only screen and (max-width: 60.85em) {
+  .m-hero p,
+  .p {
+    font-size: 16px;
+    padding: 0;
+  }
+  .basicParagaph {
+    margin-top: 35px;
+  }
+  p.h-header {
+    margin: 0;
+    padding: 0;
+  }
+  h1.h-header {
+    margin-bottom: 5px;
+  }
+  .h-header,
+  h1 {
+    font-size: 24px !important;
+    line-height: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 24px;
+  }
+
+  .h-subheader {
+    font-size: 11px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  .bigText {
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 36px;
+    font-size: 41px;
+  }
+  .slash {
+    font-size: 34px;
+    letter-spacing: -4px;
+  }
+  .serfiBigger {
+    font-size: 45px !important;
+  }
+}
+.h-header span {
+  overflow: visible !important;
+}
+.coral {
+  color: coral;
+}
+.grey {
+  color: #9a959f;
+}
+/* .serifItCoral {
+  font-size: 20px;
+  font-weight: 400;
+  color: coral;
+  font-family: "Vollkorn";
+  font-style: italic;
+  text-transform: none;
+  line-height: 20px;
+  overflow: visible !important;
+}
+.txtLeft {
+  align-self: flex-start;
+}
+.txtRight {
+  align-self: flex-end;
+  margin-top: -15px;
+} */
+.openReg {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+h-header {
+  line-height: 0px;
+}
+.bigText {
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 36px;
+  font-size: 41px;
+}
+.opensans {
+  font-family: open sans;
+}
+.serif {
+  font-family: "Vollkorn";
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: lowercase;
+  font-style: italic;
+}
 .b-ajax-content {
   -webkit-animation: FadeIn 2s ease forwards;
   animation: FadeIn 2s ease forwards;
