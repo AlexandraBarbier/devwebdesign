@@ -270,7 +270,6 @@ main.s-home {
   .h-header,
   h1 {
     font-size: 30px;
-    line-height: 0;
   }
 }
 .m-hero {
@@ -303,10 +302,8 @@ main.s-home {
   .h-header,
   h1 {
     font-size: 24px;
-    line-height: 0;
     text-transform: uppercase;
     font-weight: 800;
-    line-height: 24px;
   }
 
   .h-subheader {
@@ -314,12 +311,7 @@ main.s-home {
     font-weight: 300;
     margin-top: 20px;
   }
-  .bigText {
-    text-transform: uppercase;
-    font-weight: 800;
-    line-height: 36px;
-    font-size: 41px;
-  }
+
   .slash {
     font-size: 34px;
     letter-spacing: -4px;
@@ -360,15 +352,6 @@ main.s-home {
   text-transform: none;
 }
 
-h-header {
-  line-height: 0px;
-}
-.bigText {
-  text-transform: uppercase;
-  font-weight: 800;
-  line-height: 36px;
-  font-size: 41px;
-}
 .opensans {
   font-family: open sans;
 }
@@ -683,4 +666,18 @@ h1 {
 }
 .s-home strong {
   font-weight: 400;
+}
+::marker {
+  color: var(--touchColor);
+  font-size: 11px;
+}
+
+li {
+  list-style: decimal-leading-zero;
+}
+ol {
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 22px;
+  line-height: 27px;
 }
