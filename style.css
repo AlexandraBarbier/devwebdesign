@@ -28,10 +28,11 @@ html {
 }
 
 html {
-  background-color: #f7f7f7;
+  background-color: #f1f1f1;
   font-size: 16px;
   scroll-behavior: smooth;
   font-size: 1rem;
+  color: var(--black);
 }
 @media only screen and (min-width: 103.75em) {
   html {
@@ -72,11 +73,12 @@ a {
 }
 
 :root {
-  --black: #3c3c3c;
+  --black: #2d2d2d;
   --touchColor: #eb3d0b;
   --grey: #9a959f;
   --touchFont: "hatton", "open sans";
-  --bodyFont: "open sans", "inter", "helvetica", "roboto", "arial", sans-serif;
+  --bodyFont: "montserrat", "open sans", "inter", "helvetica", "roboto", "arial",
+    sans-serif;
 }
 
 /* header */
@@ -616,6 +618,16 @@ img {
   width: 100%;
 }
 @media only screen and (max-width: 60.85em) {
+  main.s-home {
+    margin: 0px !important;
+  }
+  .services-heading {
+    font-size: 25px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
   .b-grid-row {
     display: block;
   }
@@ -652,14 +664,15 @@ h1 {
 }
 
 .h-header {
-  font-size: 45px;
-  line-height: 47px;
+  font-family: "Hatton";
+  font-size: 55px;
+  line-height: 76px;
+  font-weight: 500;
+  color: var(--black);
+  text-transform: none;
 }
-.interTitle {
-  font-size: 53px;
-  font-family: inter;
-  opacity: 0.8;
-  font-weight: 300;
+.center {
+  text-align: center;
 }
 .basicParagaph {
   font-family: var(--bodyFont);
