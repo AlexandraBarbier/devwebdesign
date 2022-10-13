@@ -1,6 +1,25 @@
 /* to start with good bases */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Hatton";
+  src: url(./fonts/Hatton-Ultralight.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Hatton";
+  src: url(./fonts/Hatton.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Hatton";
+  src: url(./fonts/Hatton-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url(./fonts/Graphik-Regular-Trial.otf);
+  font-weight: normal;
+}
 *,
 *::after,
 *::before,
@@ -9,7 +28,7 @@ html {
 }
 
 html {
-  background-color: #fdfdfd;
+  background-color: #f7f7f7;
   font-size: 16px;
   scroll-behavior: smooth;
   font-size: 1rem;
@@ -46,14 +65,18 @@ textarea {
 
 a {
   text-decoration: none !important;
-  color: #000000;
+  color: var(--black);
   position: relative;
   padding-bottom: 0;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid var(--black);
 }
 
 :root {
-  --black: #111;
+  --black: #3c3c3c;
+  --touchColor: #eb3d0b;
+  --grey: #9a959f;
+  --touchFont: "hatton", "open sans";
+  --bodyFont: "open sans", "inter", "helvetica", "roboto", "arial", sans-serif;
 }
 
 /* header */
@@ -62,7 +85,7 @@ a {
   top: 0px;
   left: 0px;
   height: 75px;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid var(--grey);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -78,7 +101,7 @@ a {
   position: relative;
 }
 .menu span {
-  color: #111;
+  color: var(--black);
   font-size: 20;
   transition: 0.5s;
   font-weight: 100;
@@ -192,9 +215,25 @@ a {
 span {
   overflow: hidden;
 }
-
+.line--h {
+  display: inline-block;
+  border-bottom: 1px solid var(--black);
+  line-height: 0;
+  width: 159px;
+  margin-bottom: 14px;
+}
 /* main */
-
+main.s-home {
+  margin: 0px 120px;
+}
+.services-heading {
+  font-size: 40px;
+  font-family: "Hatton";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 45px;
+}
 .b-content {
   position: relative;
   left: 0;
@@ -233,7 +272,17 @@ span {
     line-height: 0;
   }
 }
-
+.m-hero {
+  display: flex;
+  font-family: var(--touchFont);
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-size: 0.8rem;
+}
 @media only screen and (max-width: 60.85em) {
   .m-hero p,
   .p {
@@ -282,10 +331,10 @@ span {
   overflow: visible !important;
 }
 .coral {
-  color: coral;
+  color: var(--touchColor);
 }
 .grey {
-  color: #9a959f;
+  color: var(--grey);
 }
 /* .serifItCoral {
   font-size: 20px;
@@ -406,12 +455,14 @@ h-header {
 .s-work > div:nth-child(odd) div {
   margin: 0 0 30px 0;
 }
-.s-work > div:nth-child(even) {
+.s-work > div:nth-child(even),
+.services > div:nth-child(even) {
   flex-direction: column-reverse;
   padding-left: 5%;
   margin-left: 0;
 }
-.s-work > div:nth-child(even) div {
+.s-work > div:nth-child(even) div,
+.services > div:nth-child(even) div {
   margin: 30px 0 0 0;
 }
 .s-work > div:last-child {
@@ -547,8 +598,8 @@ img {
   border-bottom: 1px solid #979797;
 }
 .s-work-nav ul li a.active {
-  color: #000000 !important;
-  border-bottom: 1px solid #000000 !important;
+  color: var(--black) !important;
+  border-bottom: 1px solid var(--black) !important;
 }
 
 .b-grid-row {
@@ -590,4 +641,28 @@ h1 {
   h1 {
     font-size: 3em;
   }
+}
+
+.b-line--center {
+  position: relative;
+  margin: 30px auto;
+  height: 180px;
+  width: 1px;
+  background: var(--black);
+}
+
+.h-header {
+  font-size: 45px;
+  line-height: 47px;
+}
+.interTitle {
+  font-size: 53px;
+  font-family: inter;
+  opacity: 0.8;
+  font-weight: 300;
+}
+.basicParagaph {
+  font-family: var(--bodyFont);
+  font-size: 16px;
+  text-transform: none;
 }
