@@ -267,9 +267,8 @@ main.s-home {
 }
 
 @media only screen and (max-width: 60.85em) {
-  .h-header,
-  h1 {
-    font-size: 30px;
+  h1.h-header {
+    font-size: 43px;
   }
 }
 .m-hero {
@@ -301,7 +300,6 @@ main.s-home {
   }
   .h-header,
   h1 {
-    font-size: 24px;
     text-transform: uppercase;
     font-weight: 800;
   }
@@ -329,23 +327,7 @@ main.s-home {
 .grey {
   color: var(--grey);
 }
-/* .serifItCoral {
-  font-size: 20px;
-  font-weight: 400;
-  color: coral;
-  font-family: "Vollkorn";
-  font-style: italic;
-  text-transform: none;
-  line-height: 20px;
-  overflow: visible !important;
-}
-.txtLeft {
-  align-self: flex-start;
-}
-.txtRight {
-  align-self: flex-end;
-  margin-top: -15px;
-} */
+
 .openReg {
   font-size: 16px;
   font-weight: 400;
@@ -686,24 +668,30 @@ ol {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 .relative {
   position: relative;
 }
-
+.montserrat {
+  font-family: var(--bodyFont);
+  letter-spacing: -1px;
+}
 .vertical--center {
   position: absolute;
   top: 50%;
   left: 0%;
   transform: translate(-50%, 5%) rotate(90deg);
 }
-h2.bold {
-  text-align: center;
+.bold {
   font-size: 23px;
   text-transform: none;
   letter-spacing: -1px;
+  font-size: 600;
   font-family: montserrat;
+}
+h2.center {
+  text-align: center;
 }
 
 .background--text {
@@ -722,4 +710,8 @@ h2.bold {
   font-size: 7rem;
   text-transform: uppercase;
   line-height: 6rem;
+}
+.h-header--sub {
+  font-size: 20px;
+  text-align: left;
 }
