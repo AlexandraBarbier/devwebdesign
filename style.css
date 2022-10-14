@@ -681,3 +681,45 @@ ol {
   padding-inline-start: 22px;
   line-height: 27px;
 }
+.thin {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: bold;
+}
+.relative {
+  position: relative;
+}
+
+.vertical--center {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, 5%) rotate(90deg);
+}
+h2.bold {
+  text-align: center;
+  font-size: 23px;
+  text-transform: none;
+  letter-spacing: -1px;
+  font-family: montserrat;
+}
+
+.background--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  opacity: 0.02;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+}
+.background--text p {
+  word-break: break-all;
+  word-wrap: break-word;
+  width: 100vw;
+  font-size: 7rem;
+  text-transform: uppercase;
+  line-height: 6rem;
+}
