@@ -715,3 +715,23 @@ h2.center {
   font-size: 20px;
   text-align: left;
 }
+
+#section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  background-color: white;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  position: absolute;
+  /* top: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%); */
+}

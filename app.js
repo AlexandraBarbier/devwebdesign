@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("Hello world");
 // U like my website ? See my code, friends.
 
 // Alexandra Barbier
@@ -235,104 +235,157 @@ const hoverLinks = () => {
   });
 };
 
-const ham = document.querySelector("#menu");
+// const ham = document.querySelector("#menu");
 
-const menu = () => {
-  console.log("menu open animation");
-  const tl1 = gsap.timeline();
-  tl1.from(".logo , .menu-open", {
-    duration: 1,
-    y: -100,
-    opacity: 0,
-    stagger: {
-      amount: 0.4,
+// const menu = () => {
+//   console.log("menu open animation");
+//   const tl1 = gsap.timeline();
+//   tl1.from(".logo , .menu-open", {
+//     duration: 1,
+//     y: -100,
+//     opacity: 0,
+//     stagger: {
+//       amount: 0.4,
+//     },
+//   });
+//   tl1.to(
+//     ".header",
+//     {
+//       opacity: 1,
+//       letterSpacing: "0px",
+//       duration: 1.2,
+//     },
+//     "-=.7"
+//   );
+
+//   const tl = gsap.timeline({
+//     paused: "true",
+//   });
+
+//   tl.to(".menu-container", {
+//     duration: 1,
+//     x: 0,
+//   });
+//   tl.from(
+//     ".menu-close",
+//     {
+//       opacity: 0,
+//       rotate: "180deg",
+//     },
+//     "-=.2"
+//   );
+//   tl.from(
+//     ".line",
+//     {
+//       duration: 1,
+//       stagger: {
+//         amount: 0.5,
+//       },
+//       width: "0%",
+//     },
+//     "-=.2"
+//   );
+//   tl.from(
+//     ".menu-item-number",
+//     {
+//       duration: 1,
+//       stagger: {
+//         amount: 0.5,
+//       },
+//       y: 100,
+//     },
+//     "-=1.5"
+//   );
+//   tl.from(
+//     ".menu-item-name",
+//     {
+//       duration: 1,
+//       stagger: {
+//         amount: 0.5,
+//       },
+//       y: 100,
+//     },
+//     "-=1.3"
+//   );
+//   tl.from(
+//     ".menu-item-sub",
+//     {
+//       duration: 1,
+//       stagger: {
+//         amount: 0.5,
+//       },
+//       y: 100,
+//     },
+//     "-=1.1"
+//   );
+//   tl.from(
+//     ".menu-item-icon",
+//     {
+//       duration: 1,
+//       stagger: {
+//         amount: 0.5,
+//       },
+//       y: 100,
+//     },
+//     "-=1"
+//   );
+
+//   tl.reverse();
+
+//   ham.addEventListener("click", () => {
+//     tl.reversed(!tl.reversed());
+//   });
+// };
+
+// circle fill screen
+
+let section = document.getElementById("section"),
+  title = document.getElementById("title"),
+  mark = title.querySelector("span"),
+  dot = document.querySelector(".dot");
+
+gsap.set(dot, {
+  width: "142vmax", // ensures it fills every part of the screen.
+  height: "142vmax",
+  xPercent: -50, // center the dot in the section area
+  yPercent: -50,
+  top: "50%",
+  left: "30%",
+});
+
+let tl1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: section,
+    start: "top top",
+    end: "bottom top",
+    markers: true,
+    scrub: 1.5,
+    pin: section,
+    pinSpacing: true,
+    invalidateOnRefresh: true,
+  },
+  defaults: { ease: "none" },
+});
+
+tl1.to(title, { opacity: 1 }).fromTo(
+  dot,
+  {
+    scale: 0,
+    x: () => {
+      let markBounds = mark.getBoundingClientRect(),
+        px = markBounds.left + markBounds.width; // dot is about 54% from the left of the bounds of the character
+      return px - section.getBoundingClientRect().width / 2;
     },
-  });
-  tl1.to(
-    ".header",
-    {
-      opacity: 1,
-      letterSpacing: "0px",
-      duration: 1.2,
+    y: () => {
+      let markBounds = mark.getBoundingClientRect(),
+        py = markBounds.top + markBounds.height; // dot is about 73% from the top of the bounds of the character
+      return py - section.getBoundingClientRect().height / 2;
     },
-    "-=.7"
-  );
-
-  const tl = gsap.timeline({
-    paused: "true",
-  });
-
-  tl.to(".menu-container", {
-    duration: 1,
+  },
+  {
     x: 0,
-  });
-  tl.from(
-    ".menu-close",
-    {
-      opacity: 0,
-      rotate: "180deg",
-    },
-    "-=.2"
-  );
-  tl.from(
-    ".line",
-    {
-      duration: 1,
-      stagger: {
-        amount: 0.5,
-      },
-      width: "0%",
-    },
-    "-=.2"
-  );
-  tl.from(
-    ".menu-item-number",
-    {
-      duration: 1,
-      stagger: {
-        amount: 0.5,
-      },
-      y: 100,
-    },
-    "-=1.5"
-  );
-  tl.from(
-    ".menu-item-name",
-    {
-      duration: 1,
-      stagger: {
-        amount: 0.5,
-      },
-      y: 100,
-    },
-    "-=1.3"
-  );
-  tl.from(
-    ".menu-item-sub",
-    {
-      duration: 1,
-      stagger: {
-        amount: 0.5,
-      },
-      y: 100,
-    },
-    "-=1.1"
-  );
-  tl.from(
-    ".menu-item-icon",
-    {
-      duration: 1,
-      stagger: {
-        amount: 0.5,
-      },
-      y: 100,
-    },
-    "-=1"
-  );
-
-  tl.reverse();
-
-  ham.addEventListener("click", () => {
-    tl.reversed(!tl.reversed());
-  });
-};
+    y: 0,
+    ease: "power3.in",
+    scale: 1,
+  }
+);
