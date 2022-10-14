@@ -350,7 +350,7 @@ gsap.set(dot, {
   xPercent: -50, // center the dot in the section area
   yPercent: -50,
   top: "50%",
-  left: "30%",
+  left: "27%",
 });
 
 let tl1 = gsap.timeline({
